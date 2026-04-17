@@ -33,8 +33,10 @@ jobs:
         with:
           name: octomatch
           path: website
+      - name: Install tree
+        run: sudo apt-get update && sudo apt-get install -y tree
       - name: Deploy to Dev
         run: |
           echo "Downloaded artifact contents:"
-          find website -maxdepth 3 -print
+          tree website
           echo "Demo deploy step: replace with your real deploy command."
