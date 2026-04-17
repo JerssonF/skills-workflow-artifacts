@@ -23,6 +23,8 @@ jobs:
           path: website
           run-id: ${{ github.event.workflow_run.id }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install tree
+        run: sudo apt-get update && sudo apt-get install -y tree
       - name: Deploy to Production
         run: |
           echo "Downloaded artifact contents:"
