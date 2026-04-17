@@ -26,5 +26,5 @@ jobs:
       - name: Deploy to Production
         run: |
           echo "Downloaded artifact contents:"
-          tree website
+          find website -maxdepth 3 -print
           echo "Demo deploy step: replace with your real deploy command."
